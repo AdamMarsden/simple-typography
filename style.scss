@@ -1,6 +1,5 @@
 @import "_reset.scss";
 @import "_mixins.scss";
-@import "_demo.scss";
 
 /*------------------------------------*\
     # Simple Typography Settings
@@ -31,7 +30,7 @@ $blockquote-line-height: 1.5em;
 $blockquote-margin     : $paragraph-margin * 1.5;
 
 // Links
-$link-color: #4eaff6;
+$link-color: #459bd9;
 
 // hr
 $hr-margin: 30px;
@@ -64,44 +63,54 @@ h1, h2, h3, h4, h5, h6 {
     margin: $header-margin * 1.5 0 $header-margin 0;
     color: $header-color;
     line-height: $header-line-height;
-    font-weight: 400;
+    font-weight: 700;
+
+    &:first-child {
+        margin-top: 0;
+    }
 }
 
 h1 {
     font-size: $header-size;
+    margin: $header-margin * 1.5 0 $header-margin 0;
 }
 
 h2 {
     font-size: $header-size / 1.3;
+    margin: ($header-margin * 1.5) 0 ($header-margin / 1.3) 0;
 }
 
 h3 {
     font-size: $header-size / 1.5;
+    margin: ($header-margin * 1.5) 0 ($header-margin / 1.5) 0;
 }
 
 h4 {
     font-size: $header-size / 1.7;
+    margin: ($header-margin * 1.5) 0 ($header-margin / 1.7) 0;
 }
 
 h5 {
     font-size: $header-size / 1.8;
+    margin: ($header-margin * 1.5) 0 ($header-margin / 1.8) 0;
 }
 
 h6 {
     font-size: $header-size / 2;
+    margin: ($header-margin * 1.5) 0 ($header-margin / 2) 0;
 }
 
 
 
 // Paragraphs
 p {
-    margin-top: $paragraph-margin;
+    margin-bottom: $paragraph-margin;
     font-size: $paragraph-size;
     line-height: $paragraph-line-height;
     color: $paragraph-color;
 
-    &:first-of-type {
-        margin-top: 0;
+    &:last-of-type {
+        margin-bottom: 0;
     }
 }
 
@@ -110,17 +119,17 @@ p {
 // Links
 a {
     color: $link-color;
-    text-decoration: none;
-    @include transition(all .2s ease);
+    transition: all 0.2s ease;
 
     &:hover {
-        color: darken($link-color, 10%);
+        color: darken($link-color, 20%);
     }
 }
 
 
 // Lists
-ul, ol {
+ul,
+ol {
     margin: $paragraph-margin 0 0 20px;
 
     li {
@@ -129,7 +138,8 @@ ul, ol {
         color: $paragraph-color;
     }
 
-    ul, ol {
+    ul,
+    ol {
         margin-top: 0;
     }
 }
@@ -221,8 +231,6 @@ pre {
     background-color: lighten($border-color, 12%);
     border: 1px solid $border-color;
     overflow: auto;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
     border-radius: 3px;
 
     code {
@@ -238,24 +246,26 @@ code {
     top: -0.2em;
     padding: 3px;
     font-family: Courier New, Courier, monospace;
-    font-size: $paragraph-size / 1.4;
-    color: darken($border-color, 40%);
+    font-size: $paragraph-size / 1.2;
+    color: darken($border-color, 70%);
     line-height: 1em;
     pointer-events: none;
     border: 1px solid $border-color;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
     border-radius: 3px;
 }
 
 
 
 // Misc Styles
-em, i, .italic {
+em,
+i,
+.italic {
     font-style: italic;
 }
 
-strong, b, .bold {
+strong,
+b,
+.bold {
     font-weight: $font-weight-bold;
 }
 

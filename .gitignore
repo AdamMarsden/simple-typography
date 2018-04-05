@@ -1,9 +1,0 @@
-*~
-*/node_modules
-node_modules/*
-*/.sass_cache
-readme.html
-license.txt
-.log
-.DS_Store
-.*/
